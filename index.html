@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto de Carpintería</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Presupuesto de Carpintería</h1>
+        <div class="form-group">
+            <label for="client-name">Nombre del Cliente:</label>
+            <input type="text" id="client-name" name="client-name" required>
+        </div>
+        <form id="budget-form">
+            <div class="form-group">
+                <label for="material">Material:</label>
+                <input type="text" id="material" name="material" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+            </div>
+            <div class="form-group">
+                <label for="precio-unitario">Precio Unitario:</label>
+                <input type="number" id="precio-unitario" name="precio-unitario" required>
+            </div>
+            <button type="submit">Agregar</button>
+        </form>
+        <h2>Lista de Materiales</h2>
+        <table id="materials-table">
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Precio Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="labor-cost">
+            <label for="labor-percentage">Porcentaje de Mano de Obra (%):</label>
+            <input type="number" id="labor-percentage" name="labor-percentage" value="0">
+            <button id="calculate-labor-cost">Calcular</button>
+        </div>
+        <h2>Totales</h2>
+        <p>Valor de Materiales: $<span id="materials-total">0.00</span></p>
+        <p>Valor de la Mano de Obra: $<span id="labor-cost-total">0.00</span></p>
+        <p>Total Final: $<span id="final-total">0.00</span></p>
+        <textarea id="total-text" rows="3" cols="50" readonly></textarea>
+        <button id="generate-pdf" class="pdf-button"><img src="https://farmaceuticos.medicina-intensiva.cl/img/bajar.png" alt="PDF icon" width="20"> Generar PDF</button>
+        <a href="index.html" class="new-budget-button">Hacer nuevo presupuesto</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
