@@ -6,6 +6,7 @@ body {
 }
 
 .container {
+    background-image: url('https://png.pngtree.com/background/20230518/original/pngtree-an-old-woodworking-shop-with-tables-and-chairs-picture-image_2646691.jpg');
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -16,7 +17,7 @@ body {
 }
 
 h1, h2 {
-    color: #333;
+    color: whitesmoke;
     text-align: center;
 }
 
@@ -29,6 +30,10 @@ h1, h2 {
 label {
     margin-bottom: 5px;
     font-weight: bold;
+    color: whitesmoke;
+}
+p{
+    color: whitesmoke; 
 }
 
 input, textarea {
