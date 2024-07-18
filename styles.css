@@ -7,10 +7,12 @@ body {
 
 .container {
     background-image: url('https://png.pngtree.com/background/20230518/original/pngtree-an-old-woodworking-shop-with-tables-and-chairs-picture-image_2646691.jpg');
+    background-size: cover;
+    background-position: center;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: 20px;
@@ -32,8 +34,9 @@ label {
     font-weight: bold;
     color: whitesmoke;
 }
-p{
-    color: whitesmoke; 
+
+p {
+    color: whitesmoke;
 }
 
 input, textarea {
@@ -69,15 +72,17 @@ table, th, td {
 th, td {
     padding: 10px;
     text-align: left;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: whitesmoke; /* White text */
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent black */
 }
 
 #total-budget, #materials-total, #labor-cost-total, #final-total {
     font-weight: bold;
-    color: #007bff;
+    color: whitesmoke; /* White text */
 }
 
 .new-budget-button {
